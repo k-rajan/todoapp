@@ -7,11 +7,13 @@
                  [ring/ring-json "0.3.1"]
                  [ring/ring-defaults "0.1.2"]
                  [korma "0.3.3"]
+                 [lobos "1.0.0-beta3"]
                  [postgresql "9.1-901.jdbc4"]
                  [hiccup "1.0.5"]]
 
   :plugins [[lein-ring "0.8.13"]]
-  :ring {:handler todoapp.handler/app}
+  :ring {:init  todoapp.migrations/run-migrations
+         :handler todoapp.handler/app}
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                         [ring-mock "0.1.5"]]}})

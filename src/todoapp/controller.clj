@@ -1,13 +1,11 @@
 (ns todoapp.controller
   (:use ring.util.response todoapp.query)
   (:require
-    [clojure.string :as str]
     [todoapp.views.layout :as layout]
     [todoapp.views.contents :as contents]))
 
 
 (defn parse-int [s]
-  ;(Integer. (re-find  #"\d+" s ))
   (read-string s)
   )
 

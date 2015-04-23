@@ -4,7 +4,6 @@
             [compojure.handler :as handler]
             [compojure.route :as route]
             [ring.middleware.json :as json]
-            [todoapp.views.layout :as layout]
             [todoapp.controller :as todo-controller]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]))
 

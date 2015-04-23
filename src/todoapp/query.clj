@@ -1,5 +1,5 @@
 (ns todoapp.query
-  (:require [todoapp.database]
+  (:require [todoapp.config]
             [korma.core :refer :all]))
 
 (defentity items)
